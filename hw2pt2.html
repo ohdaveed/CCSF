@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Homework 2 - Basic Operations</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="container p-5 my-5 bg-light">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+
+
+        function process() {
+            event.preventDefault();
+            let num1, num2, num3, n1, n2, n3, sum, ave, product, smallest, largest, result
+            num1 = document.getElementById("formGroupInput").value;
+            num2 = document.getElementById("formGroupInput2").value;
+            num3 = document.getElementById("formGroupInput3").value;
+
+            n1 = parseInt(num1);
+            n2 = parseInt(num2);
+            n3 = parseInt(num3);
+
+            sum = n1 + n2 + n3;
+
+            ave = sum / 3;
+
+            product = n1 * n2 * n3;
+
+            smallest = Math.min(n1, n2, n3);
+            largest = Math.max(n1, n2, n3);
+
+            document.getElementById("FormControlTextarea1").style.display = "none";
+
+            document.getElementById(
+                "FormControlTextarea1"
+            ).value = `Sum: ${sum}, Average: ${ave}, Product: ${product}, The smallest integers is: ${smallest}, The largest integer is: ${largest}`
+
+            $("#FormControlTextarea1").fadeIn(3000);
+
+
+        }
+
+
+    </script>
+
+    <header class="p-5 bg-primary text-white text-center">
+        <h1>David Arrizon's Homework Portfolio</h1>
+    </header>
+
+    <main class="container-fluid">
+        <form class="text-center">
+            <div class="mb-3">
+                <label for="formGroupInput" class="form-label">Number 1</label>
+                <input type="number" class="form-control" id="formGroupInput" placeholder="Any Number" />
+            </div>
+            <div class="mb-3">
+                <label for="formGroupInput2" class="form-label">Number 2</label>
+                <input type="number" class="form-control" id="formGroupInput2" placeholder="Any Number" />
+            </div>
+            <div class="mb-3">
+                <label for="formGroupInput3" class="form-label">Number 3</label>
+                <input type="number" class="form-control" id="formGroupInput3" placeholder="Any Number" />
+            </div>
+            <input class="btn btn-primary" type="reset" value="Clear" onclick="window.location.reload();" />
+            <input class="btn btn-primary" type="submit" value="Submit" onclick="process()" />
+        </form>
+        <br /><br />
+        <div class="mb-3">
+            <label for="FormControlTextarea1" class="form-label">Results</label>
+            <textarea class="form-control " id="FormControlTextarea1" rows="3">
+    </textarea>
+
+        </div>
+    </main>
+
+    <div class="container-fluid text-center">
+        <a href="hw2.html" class="btn btn-primary">Go Back</a>
+    </div>
+</body>
+
+</html>
+<!-- For Part 2:
+Create a webpage with a form that will have:
+three input boxes for the user to type three integers (numbers)
+a button to process the data (numbers) typed by the user
+a button to clear the form
+a textarea to display the results of the process (or it can be a div or paragraph element)
+You will write the JavaScript code that will:
+receive the data from those three input boxes for the three integers after the user click on the button to process the
+data
+you will calculate the sum, the average, and the product of the three integers
+you will also calculate the smallest and the largest of the three integers typed
+TIP: For finding the smallest and largest number, use the Math Object Methods of min and max
+you will present the results of these calculations in the text area - DO NOT USE ALERT BOXES!!!
+your script should not present any result if the user does not type NUMBERS in the input boxes and, instead, you should
+present an error message in the textarea
+You will use jQuery that will be triggered by a button that you will include in the form and when the user clicks on
+that button, you should fade the results you presented in the textarea.
+NOTE: If the user clicks on the button to calculate the operations, you should remove that fade to present the new set
+of results or the error message.
+TIP: See this jQuery example: fading an elementLinks to an external site. -->

@@ -6,4 +6,19 @@ body {
     padding: 0;
 }
 
+input {
+    text-align: right;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Add your custom styles here */

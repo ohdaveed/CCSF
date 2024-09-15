@@ -3,15 +3,20 @@
 
 <head>
  
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="styles.css" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta name="description" content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF" />
+    <meta name="description" content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF">
     <title>Homework 2 - Extra Credit
     </title>
+    <script>$(document).ready(function () {
+        $("#flip").click(function () {
+          $("#panel").slideToggle("slow");
+        });
+      });</script>
 </head>
 
 <body class="container p-5 my-5 bg-light">
@@ -19,15 +24,21 @@
         <h1>David Arrizon's Homework Portfolio</h1>
     </header>
     <nav class="navbar navbar-expand-lg">
-        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
     </nav>
     <main class="container p-5 my-5 bg-light text-center">
-        <h2>Homework 2</h2>
+        <h2>Homework 2 - Extra Credit</h2>
         <a href="https://hills.ccsf.edu/~darrizon/hw2pt1.html" class="btn btn-primary">Part 1</a>
         <a href="https://hills.ccsf.edu/~darrizon/hw2pt2.html" class="btn btn-primary">Part 2</a>
         <a href="https://hills.ccsf.edu/~darrizon/hw2pt3.html" class="btn btn-primary">Extra Credit</a>
         
-      <h3>Extra Credit</h3>
+      <div id="flip">Click to show/hide instructions</div>  
+      <div id="panel">
+      <p>Enter the amount of U.S. dollars you would like to convert to other currencies:</p>
+      <br>
+      </div>
+      
+
       <table id="exchangerates">
         <caption style="display: none">
           exchange rates
@@ -45,50 +56,57 @@
             <td style="border: 1px dotted gray">Euro</td>
             <td style="border: 1px dotted gray" id="exchangeeuro">0.92</td>
             <td style="border: 1px dotted gray">
-              <input type="number" id="euro" align="right" readonly />
+              <label for="euro"></label>
+              <input type="number" id="euro" readonly >
             </td>
           </tr>
           <tr>
-            <td style="border: 1px dotted gray">Dollar</td>
+            <td style="border: 1px dotted gray">Canadian Dollar</td>
             <td style="border: 1px dotted gray" id="xchangedollar">1.38</td>
-            <td style="border: 1px dotted gray" align="right">
-              <input type="number" id="dollar" readonly />
+            <td style="border: 1px dotted gray">
+              <label for="dollar"></label>
+              <input type="number" id="dollar" readonly>
             </td>
           </tr>
           <tr>
             <td style="border: 1px dotted gray">Hong Kong Dollar</td>
             <td style="border: 1px dotted gray" id="xchangehk">7.81</td>
-            <td style="border: 1px dotted gray" align="right">
-              <input type="number" id="hk" readonly />
+            <td style="border: 1px dotted gray" >
+              <label for="hk"></label>
+              <input type="number" id="hk" readonly >
             </td>
           </tr>
           <tr>
             <td style="border: 1px dotted gray">Japanese Yen</td>
             <td style="border: 1px dotted gray" id="xchangeyen">156.73</td>
-            <td style="border: 1px dotted gray" align="right">
-              <input type="number" id="japanese" readonly />
+            <td style="border: 1px dotted gray" >
+              <label for="japanese"></label>
+              <input type="number" id="japanese" readonly >
             </td>
           </tr>
           <tr>
             <td style="border: 1px dotted gray">Mexican Peso</td>
             <td style="border: 1px dotted gray" id="xchangepeso">18.41</td>
-            <td style="border: 1px dotted gray" align="right">
-              <input type="number" id="mexican" readonly />
+            <td style="border: 1px dotted gray">
+              <label for="mexican"></label>
+              <input type="number" id="mexican" readonly>
             </td>
           </tr>
           <tr>
             <td style="border: 1px dotted gray" colspan="2">
               <strong>Enter Amount of U.S. Dollars</strong>
             </td>
+            
             <td style="border: 1px dotted gray">
-              <input id="dollarsInput" type="number" required />
+              <label for="dollarsInput"></label>
+              <input id="dollarsInput" type="number" required>
             </td>
           </tr>
         </tbody>
       </table>
     </main>
-    <br />
-    <br />
+    <br>
+    <br>
     <footer class="container p-5 my-5 bg-primary text-white text-center">
       <p>David Arrizon's Homework Portfolio</p>
     </footer>

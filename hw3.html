@@ -69,6 +69,37 @@ Note: The user should be able to reuse that same form for another student! -->
     </div>
     </main>
     <script>
-     
+      $(document).ready(function() {
+        $('#studentGradesForm').submit(function(event) {
+          event.preventDefault();
+          let hwAvg = parseInt($('#hwAvg').val());
+          let midExam = parseInt($('#midExam').val());
+          let finalExam = parseInt($('#finalExam').val());
+          let participation = parseInt($('#participation').val());
+          let finalAverage = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation);
+          let finalGrade = '';
+          if (hwAvg >= 0 && hwAvg <= 100 && midExam >= 0 && midExam <= 100 && finalExam >= 0 && finalExam <= 100 && participation >= 0 && participation <= 100) {
+            if (finalAverage >= 90) {
+              finalGrade = 'A';
+            } else if (finalAverage >= 80) {
+              finalGrade = 'B';
+            } else if (finalAverage >= 70) {
+              finalGrade = 'C';
+            } else if (finalAverage >= 60) {
+              finalGrade = 'D';
+            } else {
+              finalGrade = 'F';
+            }
+            $('#finalAverage').text('Final Average: ' + Math.round(finalAverage));
+            $('#finalGrade').text('Final Grade: ' + finalGrade);
+            if (finalGrade === 'D' || finalGrade === 'F') {
+              $('#finalGrade').append('<br>Student must retake the course');
+            }
+          } else {
+            $('#finalAverage').text('Error: Invalid input');
+            $('#finalGrade').text('');
+          }
+        });
+      });
     </script>
 </html>

@@ -1,43 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-     <head>
+  <head>
     <meta charset="utf-8" />
     <title>CNIT 133 HW 4 Part 2 - Looping Statements</title>
     <meta name="description" content="HW 4 Part 2" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    >
-    <link rel="stylesheet" href="styles.css">
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-   
-     </head>
-        <body class="container p-5 my-5">
-        <header class="container p-5 my-5 bg-primary text-white text-center">
-        <h1>HW 4 Part 2 - Looping Statements</h1>
-        <p>Learn about compound interest</p>
-        </header>
-        <nav class="navbar">
-        <a class="nav-link" href="index.html">Home</a>      
-        </nav>
-        <main class="text-center">
-        <script>
+  </head>
+  <body class="container p-5 my-5">
+    <header class="container p-5 my-5 bg-primary text-white text-center">
+      <h1>HW 4 Part 2 - Looping Statements</h1>
+      <p>Learn about compound interest</p>
+    </header>
+    <nav class="navbar">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="hw2.html">HW 2</a>
+      <a class="nav-link" href="hw3.html">HW 3</a>
+      <a class="nav-link" href="hw4.html">HW 4</a>
+    </nav>
+    <main class="text-center">
+      <script>
         document.write("<table class='table table-bordered'>");
-        document.write("<thead><tr><th>Year</th><th>Amount on deposit</th><th>Interest Rate</th></tr></thead>");
-        document.write("<tbody>");    
+        document.write(
+          "<thead><tr><th>Year</th><th>Amount on deposit</th><th>Interest Rate</th></tr></thead>",
+        );
+        document.write("<tbody>");
         for (let rate = 5; rate <= 7; rate++) {
-            for (let year = 1; year <= 5; year++) {
-                let principal = 1000;
-                let amount = principal * Math.pow(1 + rate / 100, year);
-                document.write("<tr><td>" + year + "</td><td>" + amount.toFixed(2) + "</td><td>" + rate / 100 + "</td></tr>");
-            }
+          for (let year = 1; year <= 5; year++) {
+            let principal = 1000;
+            let amount = principal * Math.pow(1 + rate / 100, year);
+            document.write(
+              "<tr><td>" +
+                year +
+                "</td><td>" +
+                amount.toFixed(2) +
+                "</td><td>" +
+                rate / 100 +
+                "</td></tr>",
+            );
+          }
         }
-        </script>
-        </main>
-
+      </script>
+    </main>
+    <footer class="text-center">&copy; 2024 David Arrizon</footer>
+  </body>
 </html>
 <!-- 
 You will create a web page to show to interested clients how the compound interest works.

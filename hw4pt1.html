@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CNIT 133 HW 4 Part 1 - Looping Statements</title>
+    <meta name="description" content="HW 4 Part 1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <script>
+      $(function () {
+        $("#draggable").draggable();
+      });
+    </script>
+  </head>
+  <body class="container p-5 my-5">
+    <header class="container p-5 my-5 bg-primary text-white text-center">
+      <h1>HW 4 Part 1 - Looping Statements</h1>
+      <p>Welcome to JS Looping Statement Assignments</p>
+    </header>
+    <nav class="navbar">
+      <a class="nav-link" href="index.html">Home</a>
+    </nav>
+    <main class="text-center">
+      <div id="draggable">
+        <script>
+          let product = 1;
+          let sum = 0;
+          for (let i = 5; i <= 25; i += 4) {
+            product *= i;
+            sum += i;
+          }
+          document.write(
+            "<p>The result of 5 * 9 * 13 * 17 * 21 * 25 is " +
+              product.toLocaleString() +
+              "</p>",
+          );
+          document.write(
+            "<p>The result of 5 + 9 + 13 + 17 + 21 + 25 is " +
+              sum.toLocaleString() +
+              "</p>",
+          );
+
+          let product2 = 1;
+          let sum2 = 0;
+          let j = 3;
+          while (j <= 18) {
+            product2 *= j;
+            sum2 += j;
+            j += 3;
+          }
+          document.write(
+            "<p>The result of 3 * 6 * 9 * 12 * 15 * 18 is " +
+              product2.toLocaleString() +
+              "</p>",
+          );
+          document.write(
+            "<p>The result of 3 + 6 + 9 + 12 + 15 + 18 is " +
+              sum2.toLocaleString() +
+              "</p>",
+          );
+        </script>
+      </div>
+    </main>
+  </body>
+</html>
+
+<!-- Create a webpage for Part 1 and it will contain a script, using the for looping statement, that calculates the product and sum of every fourth integer from 5 to 25 inclusive and then displays the results, along with some accompanying text.
+
+For example, when presenting the results, you could show two lines such as:
+The result of 5 * 9 * 13 * 17 * 21 * 25 is ....
+The result of 5 + 9 + 13 + 17 + 21 + 25 is .... 
+
+On that same web page for Part 1, you will have another script, now using the while or do while looping statement, that calculates the product and sum of every third integer from 3 to 18 inclusive and then displays the results, along with some accompanying text.
+
+For example, when presenting the results, you could show two lines such as:
+The result of 3 * 6 * 9 * 12 * 15 * 18 is ....
+The result of 3 + 6 + 9 + 12 + 15 + 18 is ....
+
+You should use toLocaleString() to present the result with the correct punctuation - remember that it is really bad for users to read a big number such as 1342658 instead of reading as 1,342,658 that shows the separation of the thousands.
+
+On that same web page, you will use jQuery UI to allow the user to drag an element to any area of the page - can be any type of element. For more on jQuery UI draggable see the example in this pageLinks to an external site.. -->

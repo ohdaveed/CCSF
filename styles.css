@@ -16,4 +16,12 @@ table {
     margin-right: auto;
 }
 
+tr:nth-child(2n+1) { 
+    background-color: #337AB7;
+ }
+
+tr:nth-child(2n) { 
+    background-color: gray;
+ }
+
 /* Add your custom styles here */

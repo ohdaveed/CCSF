@@ -1,9 +1,9 @@
 /* style.css */
 
 /* Reset default styles */
-input {
+/* input {
 	text-align: right;
-}
+} */
 
 table,
 th,
@@ -28,7 +28,7 @@ tr:nth-child(2n) {
 	margin-left: auto;
 	margin-right: auto;
 	width: 300px;
-	
+
 } */
 
 section#draggable {

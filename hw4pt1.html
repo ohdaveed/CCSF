@@ -1,23 +1,26 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" >
+		<meta charset="utf-8" />
 		<title>CNIT 133 HW 4 Part 1 - Looping Statements</title>
-		<meta name="description" content="HW 4 Part 1" >
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="styles.css">
+		<meta name="description" content="HW 4 Part 1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="styles.css" />
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
 		<script>
 			$(function () {
 				$("#draggable").draggable();
 			});
 		</script>
-
 	</head>
 	<body class="container p-5 my-5">
 		<header class="container p-5 my-5 bg-primary text-white text-center">
@@ -26,17 +29,16 @@
 		</header>
 		<nav class="navbar">
 			<a class="nav-link" href="index.html">Home</a>
-      <a class="nav-link" href="hw1.html">HW 1</a>
-      <a class="nav-link" href="hw2.html">HW 2</a>
-      <a class="nav-link" href="hw3.html">HW 3</a>
-      <a class="nav-link" href="hw4.html">HW 4</a>
+			<a class="nav-link" href="hw1.html">HW 1</a>
+			<a class="nav-link" href="hw2.html">HW 2</a>
+			<a class="nav-link" href="hw3.html">HW 3</a>
+			<a class="nav-link" href="hw4.html">HW 4</a>
 		</nav>
 
 		<main class="container text-center">
 			<p>The box below is draggable thanks to jQuery</p>
 			<p>Drag it around the page</p>
-    
-  
+
 			<section id="draggable">
 				<script>
 					let product = 1;
@@ -47,15 +49,9 @@
 						sum += i;
 					}
 					document.write(
-						"<p>The result of 5 * 9 * 13 * 17 * 21 * 25 is " +
-							product.toLocaleString() +
-							"</p>",
+						"<p>The result of 5 * 9 * 13 * 17 * 21 * 25 is " + product.toLocaleString() + "</p>"
 					);
-					document.write(
-						"<p>The result of 5 + 9 + 13 + 17 + 21 + 25 is " +
-							sum.toLocaleString() +
-							"</p>",
-					);
+					document.write("<p>The result of 5 + 9 + 13 + 17 + 21 + 25 is " + sum.toLocaleString() + "</p>");
 
 					let product2 = 1;
 					let sum2 = 0;
@@ -67,20 +63,18 @@
 						j += 3;
 					}
 					document.write(
-						"<p>The result of 3 * 6 * 9 * 12 * 15 * 18 is " +
-							product2.toLocaleString() +
-							"</p>",
+						"<p>The result of 3 * 6 * 9 * 12 * 15 * 18 is " + product2.toLocaleString() + "</p>"
 					);
-					document.write(
-						"<p>The result of 3 + 6 + 9 + 12 + 15 + 18 is " +
-							sum2.toLocaleString() +
-							"</p>",
-					);
-		</script>
-      </section>
-    </main>
-		
+					document.write("<p>The result of 3 + 6 + 9 + 12 + 15 + 18 is " + sum2.toLocaleString() + "</p>");
+				</script>
+			</section>
+		</main>
+
 		<footer class="text-center">&copy; 2024 David Arrizon</footer>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"></script>
 	</body>
 </html>
 
@@ -88,7 +82,7 @@
 
 For example, when presenting the results, you could show two lines such as:
 The result of 5 * 9 * 13 * 17 * 21 * 25 is ....
-The result of 5 + 9 + 13 + 17 + 21 + 25 is .... 
+The result of 5 + 9 + 13 + 17 + 21 + 25 is ....
 
 On that same web page for Part 1, you will have another script, now using the while or do while looping statement, that calculates the product and sum of every third integer from 3 to 18 inclusive and then displays the results, along with some accompanying text.
 

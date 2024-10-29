@@ -1,110 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <title>Homework 2 - Basic Operations</title>
 
-<head>
-    <title>Homework 2 - Basic Operations</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous" />
+        <link rel="stylesheet" href="styles.css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function process() {
+                event.preventDefault();
+                let num1, num2, num3, n1, n2, n3, sum, ave, product, smallest, largest, result;
+                num1 = document.getElementById("formGroupInput").value;
+                num2 = document.getElementById("formGroupInput2").value;
+                num3 = document.getElementById("formGroupInput3").value;
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function process() {
-            event.preventDefault();
-            let num1, num2, num3, n1, n2, n3, sum, ave, product, smallest, largest, result
-            num1 = document.getElementById("formGroupInput").value;
-            num2 = document.getElementById("formGroupInput2").value;
-            num3 = document.getElementById("formGroupInput3").value;
+                // Convert string to number and handle NaN error
+                n1 = parseInt(num1);
+                n2 = parseInt(num2);
+                n3 = parseInt(num3);
 
-            // Convert string to number and handle NaN error
-            n1 = parseInt(num1);
-            n2 = parseInt(num2);
-            n3 = parseInt(num3);
+                sum = n1 + n2 + n3;
 
-            sum = n1 + n2 + n3;
+                if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+                    document.getElementById("FormControlTextarea1").style.display = "none";
+                    document.getElementById("FormControlTextarea1").value = `Please enter a number in all fields`;
+                    $("#FormControlTextarea1").fadeIn(3000);
+                    console.log("Please enter a number in all fields");
+                    return;
+                }
 
-            if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
+                ave = sum / 3;
+                document.getElementById("FormControlTextarea1").style.display = "block";
+
+                product = n1 * n2 * n3;
+
+                smallest = Math.min(n1, n2, n3);
+                largest = Math.max(n1, n2, n3);
+
                 document.getElementById("FormControlTextarea1").style.display = "none";
-                document.getElementById("FormControlTextarea1").value = `Please enter a number in all fields`;
+
+                document.getElementById("FormControlTextarea1").value =
+                    `Sum: ${sum}, Average: ${ave}, Product: ${product}, The smallest integers is: ${smallest}, The largest integer is: ${largest}`;
+                console.log(sum, ave, product, smallest, largest);
+
                 $("#FormControlTextarea1").fadeIn(3000);
-                console.log("Please enter a number in all fields");
-                return;
             }
+        </script>
+    </head>
 
-            ave = sum / 3;
-            document.getElementById("FormControlTextarea1").style.display = "block";
+    <body class="container p-5 my-5 bg-light">
+        <header class="p-5 bg-primary text-white text-center">
+            <h1>David Arrizon's Homework Portfolio</h1>
+        </header>
+        <nav class="navbar bg-light">
+            <a class="nav-link" href="index.html">Home</a>
+            <a href="hw2.html" class="nav-link active">HW 2</a>
+            <a href="https://hills.ccsf.edu/~darrizon/hw2pt1.html" class="nav-link">HW2:Part1</a>
+            <a href="https://hills.ccsf.edu/~darrizon/hw2pt3.html" class="nav-link">HW2 Extra Credit</a>
+        </nav>
+        <main class="container text-center">
+            <h3>Homework 2 - Part 2</h3>
+            <label for="FormControlTextarea1" class="form-label"
+                >Enter three integers to calculate the sum, average, product, smallest and largest integer</label
+            >
+            <form>
+                <div class="mb-3">
+                    <label for="formGroupInput" class="form-label">Number 1</label>
+                    <input type="number" class="form-control" id="formGroupInput" placeholder="Enter a digit" />
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupInput2" class="form-label">Number 2</label>
+                    <input type="number" class="form-control" id="formGroupInput2" placeholder="Enter a digit" />
+                </div>
+                <div class="mb-3">
+                    <label for="formGroupInput3" class="form-label">Number 3</label>
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="formGroupInput3"
+                        min="0"
+                        placeholder="Enter a digit" />
+                </div>
+                <input class="btn btn-primary" type="reset" value="Clear" onclick="window.location.reload();" />
+                <input class="btn btn-primary" type="submit" value="Submit" onclick="process()" />
 
-            product = n1 * n2 * n3;
+                <br /><br />
+                <div class="mb-3">
+                    <label for="FormControlTextarea1" class="form-label">Results</label>
+                    <textarea class="form-control" readonly id="FormControlTextarea1" rows="3"> </textarea>
+                </div>
+            </form>
+        </main>
 
-            smallest = Math.min(n1, n2, n3);
-            largest = Math.max(n1, n2, n3);
-
-            document.getElementById("FormControlTextarea1").style.display = "none";
-
-            document.getElementById(
-                "FormControlTextarea1"
-            ).value = `Sum: ${sum}, Average: ${ave}, Product: ${product}, The smallest integers is: ${smallest}, The largest integer is: ${largest}`
-            console.log(sum, ave, product, smallest, largest);
-
-            $("#FormControlTextarea1").fadeIn(3000);
-        }
-
-    </script>
-</head>
-
-<body class="container p-5 my-5 bg-light">
-
-    <header class="p-5 bg-primary text-white text-center">
-        <h1>David Arrizon's Homework Portfolio</h1>
-    </header>
-    <nav class="navbar bg-light">
-        <a class="nav-link" href="index.html">Home</a>
-        <a href="hw2.html" class="nav-link active">HW 2</a>
-        <a href="https://hills.ccsf.edu/~darrizon/hw2pt1.html" class="nav-link">HW2:Part1</a>
-        <a href="https://hills.ccsf.edu/~darrizon/hw2pt3.html" class="nav-link">HW2 Extra Credit</a>
-    </nav>
-    <main class="container text-center">
-
-
-        <h3>Homework 2 - Part 2</h3>
-        <label for="FormControlTextarea1" class="form-label">Enter three integers to calculate the sum, average, product, smallest and largest integer</label>
-        <form>
-            <div class="mb-3">
-                <label for="formGroupInput" class="form-label">Number 1</label>
-                <input type="number" class="form-control" id="formGroupInput" placeholder="Enter a digit">
-            </div>
-            <div class="mb-3">
-                <label for="formGroupInput2" class="form-label">Number 2</label>
-                <input type="number" class="form-control" id="formGroupInput2" placeholder="Enter a digit">
-            </div>
-            <div class="mb-3">
-                <label for="formGroupInput3" class="form-label">Number 3</label>
-                <input type="number" class="form-control" id="formGroupInput3" min="0" placeholder="Enter a digit">
-            </div>
-            <input class="btn btn-primary" type="reset" value="Clear" onclick="window.location.reload();">
-            <input class="btn btn-primary" type="submit" value="Submit" onclick="process()">
-
-            <br><br>
-            <div class="mb-3">
-                <label for="FormControlTextarea1" class="form-label">Results</label>
-                <textarea class="form-control" readonly id="FormControlTextarea1" rows="3">
-                </textarea>
-            </div>
-        </form>
-
-    </main>
-
-    <footer class="text-center">
-    &copy; 2024 David Arrizon
-  </footer>
-</body>
-
-
+        <footer class="text-center">&copy; 2024 David Arrizon</footer>
+    </body>
 </html>
 <!-- For Part 2:
 Create a webpage with a form that will have:

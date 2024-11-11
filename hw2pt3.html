@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
- 
+  <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="styles.css" >
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <meta name="description" content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF">
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="description"
+      content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF">
     <title>Homework 2 - Extra Credit
     </title>
     <script>$(document).ready(function () {
@@ -17,27 +21,27 @@
           $("#panel").slideToggle("slow");
         });
       });</script>
-</head>
+  </head>
 
-<body class="container p-5 my-5 bg-light">
+  <body class="container p-5 my-5 bg-light">
     <header class="p-5 bg-primary text-white text-center">
-        <h1>David Arrizon's Homework Portfolio</h1>
+      <h1>David Arrizon's Homework Portfolio</h1>
     </header>
     <nav class="navbar navbar-expand-lg">
-        <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="index.html">Home</a>
     </nav>
     <main class="container p-5 my-5 bg-light text-center">
-        <h2>Homework 2 - Extra Credit</h2>
-        <a href="hw2pt1.html" class="btn btn-primary">Part 1</a>
-        <a href="hw2pt2.html" class="btn btn-primary">Part 2</a>
-        <a href="hw2pt3.html" class="btn btn-primary">Extra Credit</a>
-        
-      <div id="flip">Click to show/hide instructions</div>  
+      <h2>Homework 2 - Extra Credit</h2>
+      <a href="hw2pt1.html" class="btn btn-primary">Part 1</a>
+      <a href="hw2pt2.html" class="btn btn-primary">Part 2</a>
+      <a href="hw2pt3.html" class="btn btn-primary">Extra Credit</a>
+
+      <div id="flip">Click to show/hide instructions</div>
       <div id="panel">
-      <p>Enter the amount of U.S. dollars you would like to convert to other currencies:</p>
-      <br>
+        <p>Enter the amount of U.S. dollars you would like to convert to other
+          currencies:</p>
+        <br>
       </div>
-      
 
       <table id="exchangerates">
         <caption style="display: none">
@@ -57,7 +61,7 @@
             <td style="border: 1px dotted gray" id="exchangeeuro">0.92</td>
             <td style="border: 1px dotted gray">
               <label for="euro"></label>
-              <input type="number" id="euro" readonly >
+              <input type="number" id="euro" readonly>
             </td>
           </tr>
           <tr>
@@ -71,17 +75,17 @@
           <tr>
             <td style="border: 1px dotted gray">Hong Kong Dollar</td>
             <td style="border: 1px dotted gray" id="xchangehk">7.81</td>
-            <td style="border: 1px dotted gray" >
+            <td style="border: 1px dotted gray">
               <label for="hk"></label>
-              <input type="number" id="hk" readonly >
+              <input type="number" id="hk" readonly>
             </td>
           </tr>
           <tr>
             <td style="border: 1px dotted gray">Japanese Yen</td>
             <td style="border: 1px dotted gray" id="xchangeyen">156.73</td>
-            <td style="border: 1px dotted gray" >
+            <td style="border: 1px dotted gray">
               <label for="japanese"></label>
-              <input type="number" id="japanese" readonly >
+              <input type="number" id="japanese" readonly>
             </td>
           </tr>
           <tr>
@@ -96,7 +100,7 @@
             <td style="border: 1px dotted gray" colspan="2">
               <strong>Enter Amount of U.S. Dollars</strong>
             </td>
-            
+
             <td style="border: 1px dotted gray">
               <label for="dollarsInput"></label>
               <input id="dollarsInput" type="number" required>
@@ -108,8 +112,8 @@
     <br>
     <br>
     <footer class="text-center">
-    &copy; 2024 David Arrizon
-  </footer>
+      &copy; 2024 David Arrizon
+    </footer>
 
     <script>
       let userdollars, yenvalue, hkvalue, eurovalue, dollarvalue, pesovalue;
@@ -129,6 +133,6 @@
         $("#mexican").val(pesovalue.toFixed(2));
       });
     </script>
-</body>
+  </body>
 
 </html>

@@ -51,14 +51,28 @@
 		<main class="container text-center">
 			<h1>HW5 - Part 3</h1>
 			<h3>2019 State Census Data</h3>
-			<p>Enter a state name or abbreviation to get information about the state.</p>
+			<p>
+				Enter a state name or abbreviation to get information about the
+				state.
+			</p>
 
 			<form id="stateForm" class="mb-3">
 				<div class="mb-3">
-					<label for="stateInput" class="form-label">Enter State Name or Abbreviation:</label>
-					<input type="text" class="form-control" id="stateInput" required />
+					<label for="stateInput" class="form-label"
+						>Enter State Name or Abbreviation:</label
+					>
+					<input
+						type="text"
+						class="form-control"
+						id="stateInput"
+						required />
 				</div>
-				<button type="button" class="btn btn-primary" onclick="getStateInfo()">Get State Info</button>
+				<button
+					type="button"
+					class="btn btn-primary"
+					onclick="getStateInfo()">
+					Get State Info
+				</button>
 				<button type="reset" class="btn btn-secondary">Clear</button>
 			</form>
 			<div id="output" class="mt-3"></div>
@@ -71,19 +85,54 @@
 			crossorigin="anonymous"></script>
 		<script>
 			const states = [
-				{ abbr: "AL", name: "Alabama", capital: "Montgomery", population: "4,903,185" },
-				{ abbr: "AK", name: "Alaska", capital: "Juneau", population: "731,545" },
-				{ abbr: "AZ", name: "Arizona", capital: "Phoenix", population: "7,278,717" },
-				{ abbr: "AR", name: "Arkansas", capital: "Little Rock", population: "3,017,825" },
-				{ abbr: "CA", name: "California", capital: "Sacramento", population: "39,512,223" },
-				{ abbr: "CO", name: "Colorado", capital: "Denver", population: "5,758,736" }
-			];
+				{
+					abbr: 'AL',
+					name: 'Alabama',
+					capital: 'Montgomery',
+					population: '4,903,185',
+				},
+				{
+					abbr: 'AK',
+					name: 'Alaska',
+					capital: 'Juneau',
+					population: '731,545',
+				},
+				{
+					abbr: 'AZ',
+					name: 'Arizona',
+					capital: 'Phoenix',
+					population: '7,278,717',
+				},
+				{
+					abbr: 'AR',
+					name: 'Arkansas',
+					capital: 'Little Rock',
+					population: '3,017,825',
+				},
+				{
+					abbr: 'CA',
+					name: 'California',
+					capital: 'Sacramento',
+					population: '39,512,223',
+				},
+				{
+					abbr: 'CO',
+					name: 'Colorado',
+					capital: 'Denver',
+					population: '5,758,736',
+				},
+			]
 
 			function getStateInfo() {
-				const input = document.getElementById("stateInput").value.trim().toUpperCase();
-				const state = states.find((s) => s.abbr === input || s.name.toUpperCase() === input);
+				const input = document
+					.getElementById('stateInput')
+					.value.trim()
+					.toUpperCase()
+				const state = states.find(
+					(s) => s.abbr === input || s.name.toUpperCase() === input,
+				)
 
-				const output = document.getElementById("output");
+				const output = document.getElementById('output')
 				if (state) {
 					output.innerHTML = `
 			<p>Thanks for your inquiry, here is the information you requested:</p>
@@ -91,14 +140,14 @@
 			<p>State Name = ${state.name}</p>
 			<p>Capital = ${state.capital}</p>
 			<p>Population = ${state.population}</p>
-		  `;
+		  `
 				} else {
 					output.innerHTML = `
 			<p>Sorry, we do not have information about this state! We only have information about:</p>
 			<ul class="list-group">
-			  ${states.map((s) => `<li class="list-group-item">${s.name} (${s.abbr})</li>`).join("")}
+			  ${states.map((s) => `<li class="list-group-item">${s.name} (${s.abbr})</li>`).join('')}
 			</ul>
-		  `;
+		  `
 				}
 			}
 		</script>

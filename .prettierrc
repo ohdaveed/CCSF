@@ -1,9 +1,13 @@
 {
-	"trailingComma": "all",
+	"htmlWhitespaceSensitivity": "ignore",
+	"bracketSpacing": true,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"semi": true,
 	"tabWidth": 4,
 	"useTabs": true,
-	"semi": false,
-	"singleQuote": true,
+	"printWidth": 80,
+	"singleAttributePerLine": true,
 	"bracketSameLine": true,
-	"htmlWhitespaceSensitivity": "ignore"
+	"plugins": ["@awmottaz/prettier-plugin-void-html"]
 }

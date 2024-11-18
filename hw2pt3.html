@@ -1,21 +1,28 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="styles.css" />
+		<meta charset="UTF-8">
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1">
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link
+			rel="stylesheet"
+			href="styles.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<meta name="description" content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF" />
+		<meta
+			name="description"
+			content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF">
 		<title>Homework 2 - Extra Credit</title>
 		<script>
 			$(document).ready(function () {
 				$('#flip').click(function () {
-					$('#panel').slideToggle('slow')
-				})
-			})
+					$('#panel').slideToggle('slow');
+				});
+			});
 		</script>
 	</head>
 
@@ -24,38 +31,82 @@
 			<h1>David Arrizon's Homework Portfolio</h1>
 		</header>
 		<nav class="navbar navbar-expand-md navbar-light bg-light">
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
+			<div
+				class="collapse navbar-collapse"
+				id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="index.html">Home</a>
+						<a
+							class="nav-link"
+							href="index.html">
+							Home
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="hw2.html">HW 2</a>
+						<a
+							class="nav-link"
+							href="hw2.html">
+							HW 2
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="hw3.html">HW 3</a>
+						<a
+							class="nav-link"
+							href="hw3.html">
+							HW 3
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="hw4.html">HW 4</a>
+						<a
+							class="nav-link"
+							href="hw4.html">
+							HW 4
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="hw5.html">HW 5</a>
+						<a
+							class="nav-link"
+							href="hw5.html">
+							HW 5
+						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" href="hw6.html">HW 6</a>
+						<a
+							class="nav-link active"
+							href="hw6.html">
+							HW 6
+						</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
 		<main class="container p-5 my-5 bg-light text-center">
 			<h2>Homework 2 - Extra Credit</h2>
-			<a href="hw2pt1.html" class="btn btn-primary">Part 1</a>
-			<a href="hw2pt2.html" class="btn btn-primary">Part 2</a>
-			<a href="hw2pt3.html" class="btn btn-primary">Extra Credit</a>
+			<a
+				href="hw2pt1.html"
+				class="btn btn-primary">
+				Part 1
+			</a>
+			<a
+				href="hw2pt2.html"
+				class="btn btn-primary">
+				Part 2
+			</a>
+			<a
+				href="hw2pt3.html"
+				class="btn btn-primary">
+				Extra Credit
+			</a>
 
 			<div id="flip">Click to show/hide instructions</div>
 			<div id="panel">
@@ -69,7 +120,11 @@
 				<caption style="display: none">exchange rates</caption>
 				<tbody>
 					<tr>
-						<th colspan="3" scope="row">Monetary Exchange Rates</th>
+						<th
+							colspan="3"
+							scope="row">
+							Monetary Exchange Rates
+						</th>
 					</tr>
 					<tr>
 						<th scope="row">Currency</th>
@@ -78,74 +133,110 @@
 					</tr>
 					<tr>
 						<td style="border: 1px dotted gray">Euro</td>
-						<td style="border: 1px dotted gray" id="exchangeeuro">
+						<td
+							style="border: 1px dotted gray"
+							id="exchangeeuro">
 							0.92
 						</td>
 						<td style="border: 1px dotted gray">
 							<label for="euro"></label>
-							<input type="number" id="euro" readonly title="Euro value" />
+							<input
+								type="number"
+								id="euro"
+								readonly
+								title="Euro value">
 						</td>
 					</tr>
 					<tr>
 						<td style="border: 1px dotted gray">Canadian Dollar</td>
-						<td style="border: 1px dotted gray" id="xchangedollar">
+						<td
+							style="border: 1px dotted gray"
+							id="xchangedollar">
 							1.38
 						</td>
 						<td style="border: 1px dotted gray">
 							<label for="dollar"></label>
-							<input type="number" id="dollar" readonly title="Canadian Dollar value" />
+							<input
+								type="number"
+								id="dollar"
+								readonly
+								title="Canadian Dollar value">
 						</td>
 					</tr>
 					<tr>
 						<td style="border: 1px dotted gray">
 							Hong Kong Dollar
 						</td>
-						<td style="border: 1px dotted gray" id="xchangehk">
+						<td
+							style="border: 1px dotted gray"
+							id="xchangehk">
 							7.81
 						</td>
 						<td style="border: 1px dotted gray">
 							<label for="hk"></label>
-							<input type="number" id="hk" readonly title="Hong Kong Dollar value" />
+							<input
+								type="number"
+								id="hk"
+								readonly
+								title="Hong Kong Dollar value">
 						</td>
 					</tr>
 					<tr>
 						<td style="border: 1px dotted gray">Japanese Yen</td>
-						<td style="border: 1px dotted gray" id="xchangeyen">
+						<td
+							style="border: 1px dotted gray"
+							id="xchangeyen">
 							156.73
 						</td>
 						<td style="border: 1px dotted gray">
 							<label for="japanese"></label>
 							<label for="japanese">Japanese Yen value:</label>
-							<input type="number" id="japanese" readonly title="Japanese Yen value"
-								placeholder="Japanese Yen value" />
+							<input
+								type="number"
+								id="japanese"
+								readonly
+								title="Japanese Yen value"
+								placeholder="Japanese Yen value">
 						</td>
 					</tr>
 					<tr>
 						<td style="border: 1px dotted gray">Mexican Peso</td>
-						<td style="border: 1px dotted gray" id="xchangepeso">
+						<td
+							style="border: 1px dotted gray"
+							id="xchangepeso">
 							18.41
 						</td>
 						<td style="border: 1px dotted gray">
 							<label for="mexican"></label>
-							<input type="number" id="mexican" readonly title="Mexican Peso value" />
+							<input
+								type="number"
+								id="mexican"
+								readonly
+								title="Mexican Peso value">
 						</td>
 					</tr>
 					<tr>
-						<td style="border: 1px dotted gray" colspan="2">
+						<td
+							style="border: 1px dotted gray"
+							colspan="2">
 							<strong>Enter Amount of U.S. Dollars</strong>
 						</td>
 
 						<td style="border: 1px dotted gray">
 							<label for="dollarsInput"></label>
 							<label for="dollarsInput">Amount in USD:</label>
-							<input id="dollarsInput" type="number" required placeholder="Enter amount" />
+							<input
+								id="dollarsInput"
+								type="number"
+								required
+								placeholder="Enter amount">
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</main>
-		<br />
-		<br />
+		<br>
+		<br>
 		<footer class="text-center">&copy; 2024 David Arrizon</footer>
 
 		<script>
@@ -154,23 +245,22 @@
 				hkvalue,
 				eurovalue,
 				dollarvalue,
-				pesovalue
+				pesovalue;
 
 			$('#dollarsInput').on('input', function () {
-				userdollars = $('#dollarsInput').val()
-				yenvalue = userdollars * 156.73
-				hkvalue = userdollars * 7.81
-				eurovalue = userdollars * 0.92
-				dollarvalue = userdollars * 1.38
-				pesovalue = userdollars * 18.41
+				userdollars = $('#dollarsInput').val();
+				yenvalue = userdollars * 156.73;
+				hkvalue = userdollars * 7.81;
+				eurovalue = userdollars * 0.92;
+				dollarvalue = userdollars * 1.38;
+				pesovalue = userdollars * 18.41;
 
-				$('#euro').val(eurovalue.toFixed(2))
-				$('#dollar').val(dollarvalue.toFixed(2))
-				$('#hk').val(hkvalue.toFixed(2))
-				$('#japanese').val(yenvalue.toFixed(2))
-				$('#mexican').val(pesovalue.toFixed(2))
-			})
+				$('#euro').val(eurovalue.toFixed(2));
+				$('#dollar').val(dollarvalue.toFixed(2));
+				$('#hk').val(hkvalue.toFixed(2));
+				$('#japanese').val(yenvalue.toFixed(2));
+				$('#mexican').val(pesovalue.toFixed(2));
+			});
 		</script>
 	</body>
-
 </html>

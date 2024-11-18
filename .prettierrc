@@ -1,13 +1,16 @@
 {
-	"htmlWhitespaceSensitivity": "ignore",
-	"bracketSpacing": true,
-	"singleQuote": true,
-	"trailingComma": "none",
-	"semi": true,
-	"tabWidth": 4,
-	"useTabs": true,
-	"printWidth": 80,
-	"singleAttributePerLine": true,
-	"bracketSameLine": true,
-	"plugins": ["@awmottaz/prettier-plugin-void-html"]
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "css",
+  "embeddedLanguageFormatting": "auto",
+  "singleAttributePerLine": false,
+  "plugins": ["@awmottaz/prettier-plugin-void-html"]
 }

@@ -1,0 +1,96 @@
+<!-- Create a web page for the Homework 7 with the following:
+a heading "CNIT 133 Homework 7 - Object Model and Event Model".
+include the jQuery script library in the head part of your page (between <head> and </head>) as you will use jQuery code in this page and when the user clicks on PART 1, you will show, under PART 1 a short description about this part. The same will happen when the user clicks on PART 2
+when you present the short description, you should include a hyperlink to take the user to the page of the Part described
+TIP: you can use this web page as guide exampleLinks to an external site. (this example is using version 1.7.1 of jQuery)
+a separated hyperlink that will simply take the user to the main page of the course (Homework 1)
+  -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>CNIT 133 Homework 7 - Object Model and Event Model</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#part1').click(function () {
+          $('#part1_description').show();
+        });
+        $('#part2').click(function () {
+          $('#part2_description').show();
+        });
+      });
+    </script>
+  </head>
+  <body class="container p-3">
+    <header class="bg-primary text-white text-center">
+      <h1>CNIT 133 Homework 7 - Object Model and Event Model</h1>
+    </header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw2.html"> HW 2 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw3.html"> HW 3 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw4.html"> HW 4 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw5.html"> HW 5 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw6.html"> HW 6 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw7.html"> HW 7 </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
+<main class="container text-center">
+  <h1>HW7 - Part 1</h1>
+  <p id="part1_description" style="display: none">
+    This part will show you how to use the Object Model and Event Model in
+    JavaScript.
+  </p>
+  <p><a href="hw7_part1.html">Part 1</a> - Object Model and Event Model</p>
+  <h1>HW7 - Part 2</h1>
+  <p id="part2_description" style="display: none">
+    This part will show you how to use the Object Model and Event Model in
+    jQuery.
+  </p>
+  <p><a href="hw7_part2.html">Part 2</a> - Object Model and Event Model</p>
+</main>
+<footer class="bg-primary text-white text-center p-3">
+  <p>
+    <a class="text-white text-center" href="index.html">CNIT 133 - Home</a>
+    &copy; 2024 David Arrizon
+  </p>
+</footer>

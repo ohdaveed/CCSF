@@ -22,27 +22,15 @@ a separated hyperlink that will simply take the user to the main page of the cou
       crossorigin="anonymous"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('#part1').click(function () {
-          $('#part1_description').show()
-        })
-        $('#part2').click(function () {
-          $('#part2_description').show()
-        })
-      })
-    </script>
   </head>
-  <body class="container p-3">
-    <header class="bg-primary text-white text-center">
-      <h1>CNIT 133 Homework 7 - Object Model and Event Model</h1>
-    </header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <body>
+    <script src="scripts/hw7.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button
         class="navbar-toggler"
         type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
+        data-toggle="collapse"
+        data-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -75,25 +63,35 @@ a separated hyperlink that will simply take the user to the main page of the cou
         </ul>
       </div>
     </nav>
+    <script>
+      $(document).ready(function () {
+        $('#part1').click(function () {
+          $('#part1_description').toggle()
+        })
+        $('#part2').click(function () {
+          $('#part2_description').toggle()
+        })
+      })
+    </script>
+    <main class="container">
+      <h1>CNIT 133 Homework 7 - Object Model and Event Model</h1>
+      <p id="part1_description" style="display: none">
+        This part will show you how to use the Object Model and Event Model in
+        JavaScript.
+      </p>
+      <p><a id="part1" href="#">Part 1</a> - Object Model and Event Model</p>
+      <h1>HW7 - Part 2</h1>
+      <p id="part2_description" style="display: none">
+        This part will show you how to use the Object Model and Event Model in
+        jQuery.
+      </p>
+      <p><a id="part2" href="#">Part 2</a> - Object Model and Event Model</p>
+    </main>
+    <footer class="bg-primary text-white text-center p-3">
+      <p>
+        <a class="text-white text-center" href="index.html">CNIT 133 - Home</a>
+        &copy; 2024 David Arrizon
+      </p>
+    </footer>
   </body>
 </html>
-<main class="container text-center">
-  <h1>HW7 - Part 1</h1>
-  <p id="part1_description" style="display: none">
-    This part will show you how to use the Object Model and Event Model in
-    JavaScript.
-  </p>
-  <p><a href="hw7pt1.html">Part 1</a> - Object Model and Event Model</p>
-  <h1>HW7 - Part 2</h1>
-  <p id="part2_description" style="display: none">
-    This part will show you how to use the Object Model and Event Model in
-    jQuery.
-  </p>
-  <p><a href="hw7pt2.html">Part 2</a> - Object Model and Event Model</p>
-</main>
-<footer class="bg-primary text-white text-center p-3">
-  <p>
-    <a class="text-white text-center" href="index.html">CNIT 133 - Home</a>
-    &copy; 2024 David Arrizon
-  </p>
-</footer>

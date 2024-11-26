@@ -87,6 +87,17 @@
         entire page.
       </p>
 
+      <h2>Part 3</h2>
+      <p>
+        This is the third part of the homework. It is about advanced JavaScript concepts.
+      </p>
+      <p>
+        Advanced JavaScript concepts include closures, promises, and async/await.
+      </p>
+      <p>
+        Understanding these concepts is crucial for writing efficient and effective JavaScript code.
+      </p>
+
       <form class="mb-3 text-center">
         <label for="color-red">Choose a color:</label><br />
         <input type="radio" id="color-red" name="color" value="red" />
@@ -109,7 +120,8 @@
           <option value="1em">1em</option>
           <option value="2em">2em</option>
           <option value="3em">3em</option>
-        </select>
+        </select><br />
+        <button type="button" id="reset-button" class="btn btn-secondary mt-2">Reset</button>
       </form>
     </main>
     <script
@@ -120,6 +132,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         const main = document.querySelector('main')
+        const resetButton = document.getElementById('reset-button')
 
         document
           .querySelectorAll('input[name="color"]')
@@ -128,6 +141,7 @@
               main.style.backgroundColor = this.value
             })
           })
+
         document
           .querySelectorAll('input[name="style"]')
           .forEach(function (input) {
@@ -151,13 +165,24 @@
                 : 'normal'
             })
           })
-      })
 
-      document
-        .getElementById('font-size')
-        .addEventListener('change', function () {
-          main.style.fontSize = this.value
+        document
+          .getElementById('font-size')
+          .addEventListener('change', function () {
+            main.style.fontSize = this.value
+          })
+
+        resetButton.addEventListener('click', function () {
+          main.style.backgroundColor = ''
+          main.style.textDecoration = 'none'
+          main.style.fontWeight = 'normal'
+          main.style.fontStyle = 'normal'
+          main.style.fontSize = '1em'
+          document.querySelectorAll('input[name="color"]').forEach(input => input.checked = false)
+          document.querySelectorAll('input[name="style"]').forEach(input => input.checked = false)
+          document.getElementById('font-size').value = '1em'
         })
+      })
     </script>
   </body>
 </html>

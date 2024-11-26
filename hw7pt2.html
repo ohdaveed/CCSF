@@ -24,7 +24,7 @@
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
+        data-bs-target="#navbarNav2"
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation">
@@ -56,25 +56,32 @@
         </ul>
       </div>
     </nav>
-    <>
-    <h2>HW 7 - Object Model and Miscellaneous</h2>
-    <p>
-      This is the second part of my homework. Click
-      <a href="hw7pt1.html">here</a> to go back to the first part.
-    </p>
+    <main class="container p-3">
+      <h2>Part 1</h2>
+      <p>
+        This is the first part of the homework. It is about the Object Model and
+        Event Model of JavaScript.
+      </p>
+      <h2>HW 7 - Object Model and Miscellaneous</h2>
+      <p>
+        This is the second part of my homework. Click
+        <a href="hw7pt1.html">here</a> to go back to the first part.
+      </p>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <nav
+        class="navbar navbar-expand-sm \ navbar-light bg-light \ collapse navbar-collapse"
+        id="navbarNav2">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav2"
+          aria-controls="navbarNav2"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="hw2.html"> HW 2 </a>
@@ -86,61 +93,49 @@
             <a class="nav-link" href="hw4.html"> HW 4 </a>
           </li>
         </ul>
-      </div>
-    </nav>
-
-    <main>
-      <h2>Part 2</h2>
-      <p>
-        This is the second part of the homework. It is about the Document Object
-        Model (DOM) and how it is used in JavaScript.
-      </p>
-      <p>
-        The Document Object Model (DOM) is a programming interface for HTML and
-        XML documents. It represents the structure of a document as a tree of
-        nodes. Each node in the tree represents an element, attribute, or text
-        in the document.
-      </p>
-      <p>
-        The DOM is used in JavaScript to manipulate the structure and content of
-        a document. You can use the DOM to create, modify, and delete elements
-        on a web page. You can also use the DOM to handle events, such as
-        clicking a button or submitting a form.
-      </p>
+      </nav>
     </main>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         let navItems = document.querySelectorAll('.nav-link');
+        let existingMenu = document.querySelector('.dropdown-menu');
+
         navItems.forEach((item) => {
-          item.addEventListener('mouseover', function () {
-            let existingMenu = document.querySelector('.dropdown-menu');
+          item.addEventListener('mouseenter', function () {
             if (existingMenu) {
               existingMenu.remove();
             }
+
             let subMenu = document.createElement('div');
             subMenu.classList.add('dropdown-menu');
             subMenu.style.display = 'block';
-            let hw = item.innerHTML.split(' ')[1];
+            let hw = item.textContent.split(' ')[1]; // Extract the homework number
+
             for (let i = 1; i <= 3; i++) {
               let subItem = document.createElement('a');
               subItem.classList.add('dropdown-item');
-              subItem.href = `${hw}pt${i}.html`;
+              subItem.href = `hw${i}pt${i}.html`;
               subItem.textContent = `Part ${i}`;
               subMenu.appendChild(subItem);
             }
+
             document.body.appendChild(subMenu);
             subMenu.style.position = 'absolute';
             subMenu.style.top = `${item.getBoundingClientRect().bottom}px`;
             subMenu.style.left = `${item.getBoundingClientRect().left}px`;
-          });
-          item.addEventListener('mouseout', function () {
-            document.querySelector('.dropdown-menu').remove();
-          });
 
-        })
+            subMenu.addEventListener('mouseleave', function () {
+              subMenu.timeout = setTimeout(function () {
+                subMenu.remove();
+              }, 300);
+            });
 
+            subMenu.addEventListener('mouseenter', function () {
+              clearTimeout(subMenu.timeout);
+            });
+          });
+        });
       });
-
     </script>
   </body>
 </html>

@@ -3,7 +3,41 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "build": "tsc",
+    "prepublishOnly": "npm run format && npm run build"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccsfhw/ccsfhw.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ccsfhw/ccsfhw/issues"
+  },
+  "homepage": "https://github.com/ccsfhw/ccsfhw#readme",
+  "contributors": [],
+  "directories": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/ccsfhw"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "type": "module",
@@ -13,7 +47,7 @@
   "devDependencies": {
     "@awmottaz/prettier-plugin-void-html": "^1.6.1",
     "@eslint/js": "^9.14.0",
-    "eslint": "^9.14.0",
+    "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.12.0",
     "prettier": "3.3.3"

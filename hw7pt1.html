@@ -29,25 +29,25 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html"> Home </a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="hw2.html"> HW 2 </a>
+            <a class="nav-link" href="hw2.html">HW 2</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="hw3.html"> HW 3 </a>
+            <a class="nav-link" href="hw3.html">HW 3</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="hw4.html"> HW 4 </a>
+            <a class="nav-link" href="hw4.html">HW 4</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="hw5.html"> HW 5 </a>
+            <a class="nav-link" href="hw5.html">HW 5</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="hw6.html"> HW 6 </a>
+            <a class="nav-link" href="hw6.html">HW 6</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="hw7.html"> HW 7 </a>
+            <a class="nav-link active" href="hw7.html">HW 7</a>
           </li>
         </ul>
       </div>
@@ -108,55 +108,52 @@
           <option value="3em">3em</option>
         </select>
       </form>
-      <a href="hw7.html">HW 7</a>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+3i4l5Y5r5vvo8+0b6a5a5b6a5b6a"
       crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        const $main = $('main');
-        $('input[name="color"]').change(function () {
-          $main.css('background-color', $(this).val());
-        });
+      document.addEventListener('DOMContentLoaded', function () {
+        const main = document.querySelector('main');
 
-        $('input[name="style"]').change(function () {
-          let styles =
-            ($('#style-underline').is(':checked') ? 'underline ' : '') +
-            ($('#style-bold').is(':checked') ? 'bold ' : '') +
-            ($('#style-italic').is(':checked') ? 'italic ' : '');
-          $main.css(
-            'font-style',
-            styles.includes('italic') ? 'italic' : 'normal'
-          );
-          $main.css('font-weight', styles.includes('bold') ? 'bold' : 'normal');
-          $main.css(
-            'text-decoration',
-            styles.includes('underline') ? 'underline' : 'none'
-          );
-        });
+        document
+          .querySelectorAll('input[name="color"]')
+          .forEach(function (input) {
+            input.addEventListener('change', function () {
+              main.style.backgroundColor = this.value;
+            });
+          });
+        document
+          .querySelectorAll('input[name="style"]')
+          .forEach(function (input) {
+            input.addEventListener('change', function () {
+              const styles = [];
+              if (document.getElementById('style-underline').checked)
+                styles.push('underline');
+              if (document.getElementById('style-bold').checked)
+                styles.push('bold');
+              if (document.getElementById('style-italic').checked)
+                styles.push('italic');
 
-        $('#font-size').change(function () {
-          $main.css('font-size', $(this).val());
-        });
+              main.style.textDecoration = styles.includes('underline')
+                ? 'underline'
+                : 'none';
+              main.style.fontWeight = styles.includes('bold')
+                ? 'bold'
+                : 'normal';
+              main.style.fontStyle = styles.includes('italic')
+                ? 'italic'
+                : 'normal';
+            });
+          });
       });
+
+      document
+        .getElementById('font-size')
+        .addEventListener('change', function () {
+          main.style.fontSize = this.value;
+        });
     </script>
   </body>
 </html>
-
-<!-- Create a webpage for part 1 with
-a heading of your choice
-a div, or a main tag with at least 3 paragraphs and that will be the area to be used to apply the styles chosen by the user
-a form with:
-radio buttons for the user to select the color of the background to be applied (you should have at least 2 different colors for the user to choose from)
-checkboxes that will allow the user to choose "underline", and/or "bold", and/or "italic" - remember that HTML checkboxes allow the user to choose one or more options
-a select element to create a drop-down list where you will allow the user to select the font-size to be applied (at least 3 different font-size should be listed and preferably in em, or rem, or % units)
-there should be no button to clear the choices, neither a button to submit the information - when the user selects a style, that style will be applied right away
-a hyperlink so the user can go back to the page of Homework 7
-You will write a script (it can be in JavaScript or jQuery) that will do the following:
-As the user starts selecting the styles available (from the radio buttons, or from the checkboxes, or from the select (drop-down list)), you will apply the selected style to the area mentioned above (div or using the <main> tag)
-IMPORTANT NOTES:
-Remember that if the user checks a certain checkbox and later the user unchecks it, you will need to remove the style that was unchecked from the div (or main) area.
-The styles should be added as the user keeps selecting/checking the styles from the form you provided - this means that if the user checks the radio button with a color for the background and checks the bold of the checkbox group, both of these styles should be applied - it's not only applying the last style chosen! -->

@@ -1,24 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta
       name="description"
-      content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF">
+      content="Homework 2 for JavaScript, jQuery, AJAX course at CCSF"
+    />
     <title>Homework 2 - Extra Credit</title>
     <script>
       $(document).ready(function () {
         $('#flip').click(function () {
-          $('#panel').slideToggle('slow');
-        });
-      });
+          $('#panel').slideToggle('slow')
+        })
+      })
     </script>
   </head>
 
@@ -34,7 +36,8 @@
         data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
-        aria-label="Toggle navigation">
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -92,7 +95,7 @@
             <td style="border: 1px dotted gray" id="exchangeeuro">0.92</td>
             <td style="border: 1px dotted gray">
               <label for="euro"></label>
-              <input type="number" id="euro" readonly title="Euro value">
+              <input type="number" id="euro" readonly title="Euro value" />
             </td>
           </tr>
           <tr>
@@ -104,7 +107,8 @@
                 type="number"
                 id="dollar"
                 readonly
-                title="Canadian Dollar value">
+                title="Canadian Dollar value"
+              />
             </td>
           </tr>
           <tr>
@@ -116,7 +120,8 @@
                 type="number"
                 id="hk"
                 readonly
-                title="Hong Kong Dollar value">
+                title="Hong Kong Dollar value"
+              />
             </td>
           </tr>
           <tr>
@@ -130,7 +135,8 @@
                 id="japanese"
                 readonly
                 title="Japanese Yen value"
-                placeholder="Japanese Yen value">
+                placeholder="Japanese Yen value"
+              />
             </td>
           </tr>
           <tr>
@@ -142,7 +148,8 @@
                 type="number"
                 id="mexican"
                 readonly
-                title="Mexican Peso value">
+                title="Mexican Peso value"
+              />
             </td>
           </tr>
           <tr>
@@ -157,33 +164,34 @@
                 id="dollarsInput"
                 type="number"
                 required
-                placeholder="Enter amount">
+                placeholder="Enter amount"
+              />
             </td>
           </tr>
         </tbody>
       </table>
     </main>
-    <br>
-    <br>
+    <br />
+    <br />
     <footer class="text-center">&copy; 2024 David Arrizon</footer>
 
     <script>
-      let userdollars, yenvalue, hkvalue, eurovalue, dollarvalue, pesovalue;
+      let userdollars, yenvalue, hkvalue, eurovalue, dollarvalue, pesovalue
 
       $('#dollarsInput').on('input', function () {
-        userdollars = $('#dollarsInput').val();
-        yenvalue = userdollars * 156.73;
-        hkvalue = userdollars * 7.81;
-        eurovalue = userdollars * 0.92;
-        dollarvalue = userdollars * 1.38;
-        pesovalue = userdollars * 18.41;
+        userdollars = $('#dollarsInput').val()
+        yenvalue = userdollars * 156.73
+        hkvalue = userdollars * 7.81
+        eurovalue = userdollars * 0.92
+        dollarvalue = userdollars * 1.38
+        pesovalue = userdollars * 18.41
 
-        $('#euro').val(eurovalue.toFixed(2));
-        $('#dollar').val(dollarvalue.toFixed(2));
-        $('#hk').val(hkvalue.toFixed(2));
-        $('#japanese').val(yenvalue.toFixed(2));
-        $('#mexican').val(pesovalue.toFixed(2));
-      });
+        $('#euro').val(eurovalue.toFixed(2))
+        $('#dollar').val(dollarvalue.toFixed(2))
+        $('#hk').val(hkvalue.toFixed(2))
+        $('#japanese').val(yenvalue.toFixed(2))
+        $('#mexican').val(pesovalue.toFixed(2))
+      })
     </script>
   </body>
 </html>

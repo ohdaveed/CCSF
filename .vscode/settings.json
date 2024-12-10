@@ -1,3 +1,6 @@
 {
-  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+  "html.autoClosingTags": false,
+  "editor.wordWrap": "on",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

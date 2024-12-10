@@ -8,8 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
 
@@ -33,8 +32,7 @@
             class="form-control"
             id="hwAvg"
             name="hwAvg"
-            required
-          />
+            required />
         </div>
         <div class="form-group">
           <label for="midExam">Mid-Term Exam Score:</label>
@@ -43,8 +41,7 @@
             class="form-control"
             id="midExam"
             name="midExam"
-            required
-          />
+            required />
         </div>
         <div class="form-group">
           <label for="finalExam">Final Exam Score:</label>
@@ -53,8 +50,7 @@
             class="form-control"
             id="finalExam"
             name="finalExam"
-            required
-          />
+            required />
         </div>
         <div class="form-group">
           <label for="participation">Participation:</label>
@@ -63,16 +59,14 @@
             class="form-control"
             id="participation"
             name="participation"
-            required
-          />
+            required />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="reset" class="btn btn-danger">Clear</button>
       </form>
       <div
         id="output"
-        class="container p-5 my-5 bg-primary text-white text-center"
-      >
+        class="container p-5 my-5 bg-primary text-white text-center">
         <h2>Results</h2>
         <p id="finalAverage"></p>
         <p id="finalGrade"></p>
@@ -82,14 +76,14 @@
     <script>
       $(document).ready(function () {
         $('#studentGradesForm').submit(function (event) {
-          event.preventDefault()
-          let hwAvg = parseInt($('#hwAvg').val())
-          let midExam = parseInt($('#midExam').val())
-          let finalExam = parseInt($('#finalExam').val())
-          let participation = parseInt($('#participation').val())
+          event.preventDefault();
+          let hwAvg = parseInt($('#hwAvg').val());
+          let midExam = parseInt($('#midExam').val());
+          let finalExam = parseInt($('#finalExam').val());
+          let participation = parseInt($('#participation').val());
           let finalAverage =
-            0.5 * hwAvg + 0.2 * midExam + 0.2 * finalExam + 0.1 * participation
-          let finalGrade = ''
+            0.5 * hwAvg + 0.2 * midExam + 0.2 * finalExam + 0.1 * participation;
+          let finalGrade = '';
           if (
             hwAvg >= 0 &&
             hwAvg <= 100 &&
@@ -101,34 +95,33 @@
             participation <= 100
           ) {
             if (finalAverage >= 90) {
-              finalGrade = 'A'
+              finalGrade = 'A';
             } else if (finalAverage >= 80) {
-              finalGrade = 'B'
+              finalGrade = 'B';
             } else if (finalAverage >= 70) {
-              finalGrade = 'C'
+              finalGrade = 'C';
             } else if (finalAverage >= 60) {
-              finalGrade = 'D'
+              finalGrade = 'D';
             } else {
-              finalGrade = 'F'
+              finalGrade = 'F';
             }
             $('#finalAverage').text(
-              'Final Average: ' + Math.round(finalAverage),
-            )
-            $('#finalGrade').text('Final Grade: ' + finalGrade)
+              'Final Average: ' + Math.round(finalAverage)
+            );
+            $('#finalGrade').text('Final Grade: ' + finalGrade);
             if (finalGrade === 'D' || finalGrade === 'F') {
-              $('#finalGrade').append('<br>Student must retake the course')
+              $('#finalGrade').append('<br>Student must retake the course');
             }
           } else {
-            $('#finalAverage').text('Error: Invalid input')
-            $('#finalGrade').text('')
+            $('#finalAverage').text('Error: Invalid input');
+            $('#finalGrade').text('');
           }
-        })
-      })
+        });
+      });
     </script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>

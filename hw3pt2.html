@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link
       rel="stylesheet"
-      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    />
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
   </head>
 
   <body class="container p-5 my-5">
@@ -37,8 +35,7 @@
             class="form-control"
             id="salespersonName"
             name="salespersonName"
-            required
-          />
+            required />
         </div>
         <div class="form-group">
           <label for="item1">Item 1:</label>
@@ -47,8 +44,7 @@
             class="form-control"
             id="item1"
             name="item1"
-            required
-          />
+            required />
         </div>
         <div class="form-group">
           <label for="item2">Item 2:</label>
@@ -57,8 +53,7 @@
             class="form-control"
             id="item2"
             name="item2"
-            required
-          />
+            required />
         </div>
         <div class="form-group">
           <label for="item3">Item 3:</label>
@@ -67,8 +62,7 @@
             class="form-control"
             id="item3"
             name="item3"
-            required
-          />
+            required />
         </div>
         <div class="form-group">
           <label for="item4">Item 4:</label>
@@ -77,8 +71,7 @@
             class="form-control"
             id="item4"
             name="item4"
-            required
-          />
+            required />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
 
@@ -86,8 +79,7 @@
       </form>
       <div
         id="output"
-        class="container p-5 my-5 bg-primary text-white text-center"
-      >
+        class="container p-5 my-5 bg-primary text-white text-center">
         <div class="form-group">
           <label for="item1QtySold">Item 1 Qty Sold:</label>
           <input
@@ -95,64 +87,56 @@
             class="form-control"
             id="item1QtySold"
             name="item1QtySold"
-            readonly
-          />
+            readonly />
           <label for="item1Total">Item 1 Total:</label>
           <input
             type="text"
             class="form-control"
             id="item1Total"
             name="item1Total"
-            readonly
-          />
+            readonly />
           <label for="item2QtySold">Item 2 Qty Sold:</label>
           <input
             type="text"
             class="form-control"
             id="item2QtySold"
             name="item2QtySold"
-            readonly
-          />
+            readonly />
           <label for="item2Total">Item 2 Total:</label>
           <input
             type="text"
             class="form-control"
             id="item2Total"
             name="item2Total"
-            readonly
-          />
+            readonly />
           <label for="item3QtySold">Item 3 Qty Sold:</label>
           <input
             type="text"
             class="form-control"
             id="item3QtySold"
             name="item3QtySold"
-            readonly
-          />
+            readonly />
           <label for="item3Total">Item 3 Total:</label>
           <input
             type="text"
             class="form-control"
             id="item3Total"
             name="item3Total"
-            readonly
-          />
+            readonly />
           <label for="item4QtySold">Item 4 Qty Sold:</label>
           <input
             type="text"
             class="form-control"
             id="item4QtySold"
             name="item4QtySold"
-            readonly
-          />
+            readonly />
           <label for="item4Total">Item 4 Total:</label>
           <input
             type="text"
             class="form-control"
             id="item4Total"
             name="item4Total"
-            readonly
-          />
+            readonly />
         </div>
         <h2>Item Sales</h2>
         <h2>Results</h2>
@@ -166,25 +150,27 @@
         $('#salespersonName').tooltip({
           content:
             "Please make sure that the salesperson's name is spelled correctly",
-        })
-      })
+        });
+      });
       $('#salesCommissionForm').submit(function (event) {
-        event.preventDefault()
-        let item1 = parseInt($('#item1').val())
-        let item2 = parseInt($('#item2').val())
-        let item3 = parseInt($('#item3').val())
-        let item4 = parseInt($('#item4').val())
+        event.preventDefault();
+        let item1 = parseInt($('#item1').val());
+        let item2 = parseInt($('#item2').val());
+        let item3 = parseInt($('#item3').val());
+        let item4 = parseInt($('#item4').val());
 
         let totalSold =
-          item1 * 20.99 + item2 * 12.75 + item3 * 9.95 + item4 * 35.89
+          item1 * 20.99 + item2 * 12.75 + item3 * 9.95 + item4 * 35.89;
 
-        let totalEarnings = totalSold * 0.09 + 250
+        let totalEarnings = totalSold * 0.09 + 250;
 
-        $('#totalSold').text('Total Sold: $' + totalSold.toFixed(2))
+        $('#totalSold').text('Total Sold: $' + totalSold.toFixed(2));
 
-        $('#totalEarnings').text('Total Earnings: $' + totalEarnings.toFixed(2))
-        $('#output').show()
-      })
+        $('#totalEarnings').text(
+          'Total Earnings: $' + totalEarnings.toFixed(2)
+        );
+        $('#output').show();
+      });
     </script>
   </body>
 </html>

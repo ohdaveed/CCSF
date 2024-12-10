@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>CD Collection</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="container">
+
+    <header class="bg-primary text-white text-center">
+
+      <h1>Homework 8 - AJAX Application</h1>
+      <p>A simple CD collection application using AJAX</p>
+
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw2.html"> HW 2 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw3.html"> HW 3 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw4.html"> HW 4 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw5.html"> HW 5 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw6.html"> HW 6 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hw7.html"> HW 7 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="hw8.html"> HW 8 </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="p-3">
+
+      <h2>Part 1: AJAX Application - CD Catalog</h2>
+      <p>
+        AJAX (Asynchronous JavaScript and XML) is a technique for creating
+        dynamic web pages. It allows web applications to send and receive data
+        asynchronously,
+        without interfering with the display and behavior of the existing page.
+      </p>
+      <p>
+        In this application, AJAX is used to fetch the CD catalog from a remote
+        server, parse the XML data, and dynamically update the table with the
+        catalog
+        information.
+      </p>
+
+      <div class="text-center">
+        <button class="btn btn-primary" onclick="loadDoc()">Load CD
+          Catalog</button>
+
+        <button class="btn btn-secondary" onclick="clearTable()">Clear</button>
+
+      </div>
+      <p id="status"></p>
+
+      <hr>
+
+      <h2>CD Catalog</h2>
+      <p>
+        The table below displays the CD catalog fetched from the remote server
+      </p>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <table id="cdCatalogTable"
+            class="table table-responsive table-bordered visually-hidden">
+            <thead>
+              <tr>
+                <th scope="col">Artist</th>
+                <th scope="col">Title</th>
+                <th scope="col">Year</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <h2> Part 2: API Proposal - Randomuser.me</h2>
+      <!-- write a report about randomuser.me API -->
+      <!-- What type of response file you get (JSON, XML, etc.)?
+    Do you need any type of key to access and use the API?
+    Do the companies need to pay any fee to use the API and if they need, how is
+    that charged?
+    You need also to provide a link to any type of documentation that would help the
+    developer use the API. -->
+      <p>
+        One of the most tedius tasks when developing a web application is
+        creating user data for testing purposes. This is because the user data
+        needs to be realistic and unique, which can be difficult to create
+        manually. However, there are many APIs that can be used to generate
+        realistic user data. One such API is the Randomuser.me API, which
+        provides random user data in JSON format. This makes it easy to use in
+        web applications, as JSON is a common data format that can be easily
+        parsed and displayed in HTML.
+      </p>
+      <!-- {
+      "results": [
+      {
+      "gender": "female",
+      "name": {
+      "title": "Miss",
+      "first": "Jennie",
+      "last": "Nichols"
+      },
+      "location": {
+      "street": {
+      "number": 8929,
+      "name": "Valwood Pkwy",
+      },
+      "city": "Billings",
+      "state": "Michigan",
+      "country": "United States",
+      "postcode": "63104",
+      "coordinates": {
+      "latitude": "-69.8246",
+      "longitude": "134.8719"
+      },
+      "timezone": {
+      "offset": "+9:30",
+      "description": "Adelaide, Darwin"
+      }
+      },
+      "email": "jennie.nichols@example.com",
+      "login": {
+      "uuid": "7a0eed16-9430-4d68-901f-c0d4c1c3bf00",
+      "username": "yellowpeacock117",
+      "password": "addison",
+      "salt": "sld1yGtd",
+      "md5": "ab54ac4c0be9480ae8fa5e9e2a5196a3",
+      "sha1": "edcf2ce613cbdea349133c52dc2f3b83168dc51b",
+      "sha256": "48df5229235ada28389b91e60a935e4f9b73eb4bdb855ef9258a1751f10bdc5d"
+      },
+      "dob": {
+      "date": "1992-03-08T15:13:16.688Z",
+      "age": 30
+      },
+      "registered": {
+      "date": "2007-07-09T05:51:59.390Z",
+      "age": 14
+      },
+      "phone": "(272) 790-0888",
+      "cell": "(489) 330-2385",
+      "id": {
+      "name": "SSN",
+      "value": "405-88-3636"
+      },
+      "picture": {
+      "large": "https://randomuser.me/api/portraits/men/75.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/men/75.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
+      },
+      "nat": "US"
+      }
+      ],
+      "info": {
+      "seed": "56d27f4a53bd5441",
+      "results": 1,
+      "page": 1,
+      "version": "1.4"
+      }
+      } -->
+
+      <!-- We currently offer the following data formats:
+
+      JSON (default)
+      PrettyJSON or pretty
+      CSV
+      YAML
+      XML -->
+      <p>
+        By default, the <a href="https://randomuser.me"> Randomuser.me</a> API
+        returns a
+        random user object with the
+        following properties: first name, last name, email, phone number,
+        address,
+        city, state, country, postcode,coordinates, timezone, gender, age, and
+        date of birth. The API also provides a profile picture for the user,
+        which can be displayed in the web application. The response is in JSON
+        format, which makes it easy to parse and display the user data in HTML.
+        The API also offers other data formats such as CSV, YAML, and XML, which
+        can be useful for different types of applications.
+      </p>
+      <p>
+        To use the Randomuser.me API in your web application, you need to make
+        an HTTP get request or fetch call to the API endpoint with the desired
+        parameters. The
+        API endpoint is <a
+          href="https://randomuser.me/api/">https://randomuser.me/api</a>.
+      </p>
+      <p>
+        The API endpoint accepts the following parameters:
+      <ul>
+        <li>format (optional): The desired response format (default: JSON)</li>
+        <li>results (optional): The number of random user objects to return
+          (default: 1)</li>
+        <li>page (optional): The page number of results to return (default: 1)
+        </li>
+        <li>seed (optional): A random seed to ensure reproducibility of results
+          (default: a random UUID)</li>
+        <li>nat (optional): The country code of the users' addresses (default:
+          all)</li>
+      </ul>
+      </p>
+      <p>
+        The Randomuser.me API provides detailed documentation on its endpoints,
+        parameters, and response formats. You can find the documentation at the
+        following link:
+        <a href="https://randomuser.me/documentation">Randomuser.me
+          Documentation</a>.
+      </p>
+
+      <h2>Charges and Pricing</h2>
+      <p>
+        The Randomuser.me API does not require an API key to access and use the
+        API. The API is free to use for both personal and commercial projects.
+        There are no usage limits or restrictions on the number of requests you
+        can make to the API.
+      </p>
+
+      <h2>Display User</h2>
+      <p>
+        Click the button below to display a random user's name:
+      </p>
+      <button class="btn btn-primary" onclick="loadUser()">Load User</button>
+      <p id="user"></p>
+
+      <h2>Bonus</h2>
+      <h3>Example JavaScript Code</h3>
+
+      <p>
+        Here is an example of how to fetch and log the first name and city of
+        a random user using the Randomuser.me API:
+      </p>
+      <pre>
+          <code>
+            fetch('https://randomuser.me/api/?format=json')
+             .then(response => response.json())
+             .then(data => {
+                const user = data.results[0];
+                console.log(user.name.first);
+                console.log(user.location.city);
+              });
+          </code>
+        </pre>
+
+      <h3>Example jQuery Code</h3>
+      <p>
+        Here is an example of how to fetch and log the first name and city of
+        a
+        random user using the Randomuser.me API with jQuery:
+      </p>
+      <pre>
+          <code>
+
+        $.ajax({
+        url: 'https://randomuser.me/api/',
+        dataType: 'json',
+        success: function(data) {
+          const user = data.results[0];
+          $('#user').text(`Name: ${user.name.first}, City: ${user.location.city}`);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.log(textStatus, errorThrown);
+        }
+        });
+
+          </code>
+        </pre>
+
+      <h3>Display User</h3>
+      <p>
+        Click the button below to display a random user's name:
+      </p>
+
+      <button class="btn btn-primary" onclick="jQ()">Display User</button>
+      <div id="userjq"></div>
+
+
+
+      <p>Click the following link to see a json response of 100 random users
+        displaying only their gender, name, nationality, and email address:
+
+        <a
+          href="https://randomuser.me/api/?results=100&inc=gender,name,nat,email&noinfo&format=json">Generate
+          100
+          random users</a>
+
+      </p>
+
+      <!-- Footer -->
+      <footer class="text-center">&copy; <span id="year"></span> David
+        Arrizon
+      </footer>
+      <!-- Bootstrap JavaScript Libraries -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+      <script>
+        function loadUser() {
+          fetch('https://randomuser.me/api/?format=json')
+            .then(response => response.json())
+            .then(data => {
+              const user = data.results[0];
+              const userHtml = `
+                    <h2>User Profile</h2>
+                    <img src="${user.picture.large}" alt="${user.name.first}">
+                    <p>First Name: ${user.name.first}</p>
+                    <p>City: ${user.location.city}</p>
+                  `;
+
+              document.getElementById('user').innerHTML = userHtml;
+
+            })
+            .catch(error => {
+              console.log(error);
+              document.getElementById('user').textContent = 'Error fetching user data.';
+
+            });
+        }
+      </script>
+
+      <script>
+        // Get current year
+        const currentYear = new Date().getFullYear();
+        // Get year from HTML footer
+        const footerYear = document.getElementById('year').textContent;
+
+        // Check if year in footer is different from current year
+        if (footerYear !== currentYear) {
+          // Update year in footer
+          document.getElementById('year').textContent = currentYear;
+        }
+
+
+        // The loadDoc function creates an XMLHttpRequest to fetch the CD catalog XML file.
+        // It sets up an event listener for the readystatechange event to call the myFunction
+        // when the request is complete and the response is ready. The function then sends the request.
+        // The myFunction function processes the XML response, extracts the CD data, and dynamically
+        function loadDoc() {
+          const xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+              myFunction(this);
+            }
+          }
+          xhttp.open('GET', 'cd_catalog.xml', true);
+          xhttp.send();
+          // The myFunction function processes the XML response, extracts the CD data, and dynamically
+          // creates a table with the CD data.
+          function myFunction(xml) {
+            const xmlDoc = xml.responseXML;
+            const table = document.getElementById('cdCatalogTable');
+            table.classList.remove('visually-hidden');
+            const x = xmlDoc.getElementsByTagName("CD");
+            for (let i = 0; i < x.length; i++) {
+              const row = table.insertRow(i + 1);
+
+              const artist = row.insertCell(0);
+              const title = row.insertCell(1);
+              const year = row.insertCell(2);
+
+              artist.innerHTML = x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+              title.innerHTML = x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+              year.innerHTML = x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+              year.classList.add("text-center");
+            }
+
+            // The toggleTable function toggles the visibility of the table of CD data.
+            function toggleTable() {
+              const table = document.getElementById('cdCatalogTable');
+              if (table.style.display === 'none') {
+                table.style.display = 'table';
+              } else {
+                table.style.display = 'none';
+              }
+            }
+
+
+
+            // The clearTable function clears the table of CD data.
+            function clearTable() {
+              const table = document.getElementById('cdCatalogTable');
+              const rowCount = table.rows.length;
+              for (let i = rowCount - 1; i > 0; i--) {
+                table.deleteRow(i);
+              }
+            }
+          }
+        }
+
+
+        // The loadCDs function loads the CD data from the XML file.
+        function loadCDs() {
+          clearTable();
+          loadDoc();
+        }
+
+        // The clearTable function clears the table of CD data.
+        function clearTable() {
+          const table = document.getElementById('cdCatalogTable');
+          const rowCount = table.rows.length;
+          for (let i = rowCount - 1; i > 0; i--) {
+            table.deleteRow(i);
+          }
+        }
+
+      </script>
+
+      <script>
+        function jQ() {
+          $.ajax({
+            url: 'https://randomuser.me/api/',
+            dataType: 'json',
+            success: function (data) {
+              // Get first user from the response
+              const user = data.results[0];
+              // Log the user object to the console
+              console.log(user);
+              // Display the user information in the HTML
+              $('#userjq').html(`<p>Name: ${user.name.first} ${user.name.last}</p>`);
+              $('#userjq img').attr('src', user.picture.medium);
+              $('#userjq img').attr('src', user.picture.thumbnail);
+              $('#userjq img').attr('width', 200);
+              $('#userjq img').attr('height', 200);
+            },
+            error: function (xhr, status, error) {
+              console.error('Error:', error);
+              console.error('Status:', status);
+              console.error('xhr:', xhr);
+            } // end error
+          })
+        }
+      </script>
+      <!-- Start of JavaScript code -->
+
+      <!-- <script>
+        // Call the function when the page is loaded
+        $(document).ready(function () {
+          // Call the jQ function to get a random user and display their information
+          jQ();
+        });
+      </script> -->
+      <!-- End of JavaScript code -->
+  </body>
+
+</html>
+
+<!-- You will use the zipped folder - Ajax Assignment Download Ajax Assignmentto do this work!
+You will find the .html file and the .xml file
+You will edit the .html file to make it valid and include a heading, right after the opening body tag, that says "Homework 8 - AJAX Application"
+Make sure you include a hyperlink so the user can go back to the main page of the course - Homework 1
+Even if you do not know XML, you can open the .xml file in your web editor and you will see that it follows a certain structure. So, following that structure, you will include the information for a new CD that will have your name as the ARTIST and the YEAR should be the current year. Remember to save this new file with the same name, otherwise the call to this file, from inside the .html file WILL NOT WORK!
+You will upload both files to the server and open the HTML page on the browser
+Click on the button that shows in the browser and check the result that comes up - you should see a table with all the CDs listed in the XML file, including the new one you put with your name and the current year
+You will create a subheading, after the </script> tag - it can be a <h2> with "Explanation of AJAX". Below that heading you will create one or two paragraphs to explain what is happening with the JavaScript, AJAX code you see in the .html file - make sure you explain all the AJAX calls, how those calls are done - you do not need to explain the XML structure, neither name of constiables
+YOU MIGHT BE ABLE TO USE GITHUB AS A WEB SERVER AS THE AJAX CALL IS ONLY CALLING AN XML FILE WHICH IS PARSED BY THE BROWSER TOO!
+Below the paragraphs of your explanation, you will create another <h2> with REST API and below that heading , you will write some paragraphs about a chosen REST API from the List of API'sLinks to an external site.. There is another website listing some API's called Free Public API'sLinks to an external site. that you can check it out.
+The paragraphs will be like a REPORT about the API you chose. The report will be read by a group of developers that you would like to convince to use the API. You can even create a name of a company that you and the other developers would be working for and why the web application should be using the API you chose to explain. In that report, you will include information about the following:
+TIP: DO NOT simply answer the questions below, remember that you are writing a REPORT! The questions below should serve only as a checklist for your report!
+What type of response file you get (JSON, XML, etc.)?
+Do you need any type of key to access and use the API?
+Do the companies need to pay any fee to use the API and if they need, how is that charged?
+You need also to provide a link to any type of documentation that would help the developer use the API.
+TIP: Do not use the URL as the words for the hyperlink, use meaningful words to make your hyperlink accessible for users using screen readers! -->

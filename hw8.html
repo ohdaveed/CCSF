@@ -299,10 +299,16 @@
       <h3>Display 100 Random Users</h3>
       <p>Click the following link to see a json response of 100 random users
         displaying only their gender, name, nationality, and email address:
-        <a
-          href="https://randomuser.me/api/?results=100&inc=gender,name,nat,email&noinfo&format=json">Generate
-          100
-          random users</a>
+      </p>
+      <!-- open in new window -->
+      <button type="button" class="btn btn-primary m-3"
+        onclick="window.open('https://randomuser.me/api/?results=100&inc=gender,name,nat,email&noinfo&format=json')">Display
+        100 Random Users</button>
+      <p>
+        The link above will open a new window displaying the JSON response of
+        100 random users with the following properties (gender, name,
+        nationality, and email address). The JSON response can be used to
+        populate the AddressBook application with realistic user data.
       </p>
       <hr>
     </main>

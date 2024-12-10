@@ -30,6 +30,17 @@ tr:nth-child(2n) {
 	width: 300px;
 
 } */
+code {
+  background-color: #f9f2f4;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+pre {
+  background-color: #f9f2f4;
+  padding: 10px;
+  border-radius: 5px;
+}
 
 section#draggable {
   width: 300px;

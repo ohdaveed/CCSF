@@ -1,36 +1,33 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <title>Homework 2 - Basic Operations</title>
 
-    <meta charset="utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1" ></meta>
-    <meta name="description" content="Homework 2 - Basic Operations" ></meta>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Homework 2 - Basic Operations">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous" >
-    <link rel="stylesheet" href="styles.css" >
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
+
   <body class="container p-5 my-5 bg-light">
     <header class="bg-primary text-white text-center">
       <h1>David Arrizon's Homework Portfolio</h1>
     </header>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -65,46 +62,27 @@
       <form>
         <div class="mb-3">
           <label for="formGroupInput" class="form-label"> Number 1 </label>
-          <input
-            type="number"
-            class="form-control"
-            id="formGroupInput"
+          <input type="number" class="form-control" id="formGroupInput"
             placeholder="Enter a digit" />
         </div>
         <div class="mb-3">
           <label for="formGroupInput2" class="form-label"> Number 2 </label>
-          <input
-            type="number"
-            class="form-control"
-            id="formGroupInput2"
+          <input type="number" class="form-control" id="formGroupInput2"
             placeholder="Enter a digit" />
         </div>
         <div class="mb-3">
           <label for="formGroupInput3" class="form-label"> Number 3 </label>
-          <input
-            type="number"
-            class="form-control"
-            id="formGroupInput3"
-            min="0"
+          <input type="number" class="form-control" id="formGroupInput3" min="0"
             placeholder="Enter a digit" />
         </div>
-        <input
-          class="btn btn-primary"
-          type="reset"
-          value="Clear"
+        <input class="btn btn-primary" type="reset" value="Clear"
           onclick="window.location.reload();" />
-        <input
-          class="btn btn-primary"
-          type="submit"
-          value="Submit"
+        <input class="btn btn-primary" type="submit" value="Submit"
           onclick="process()" />
 
         <div class="mb-3">
           <label for="FormControlTextarea1" class="form-label"> Results </label>
-          <textarea
-            class="form-control"
-            readonly
-            id="FormControlTextarea1"
+          <textarea class="form-control" readonly id="FormControlTextarea1"
             rows="3"></textarea>
         </div>
       </form>
@@ -165,6 +143,7 @@
       }
     </script>
   </body>
+
 </html>
 <!-- For Part 2:
 Create a webpage with a form that will have:

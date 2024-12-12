@@ -1,9 +1,9 @@
 {
   "name": "ccsfhw",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+
     "start": "node index.js",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -12,7 +12,7 @@
     "prepublishOnly": "npm run format && npm run build"
   },
   "files": [
-    "index.js"
+    "main.js"
   ],
   "repository": {
     "type": "git",

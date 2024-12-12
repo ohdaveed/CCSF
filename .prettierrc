@@ -11,9 +11,7 @@
   "arrowParens": "always",
   "quoteProps": "as-needed",
   "jsxSingleQuote": false,
-  "jsxBracketSameLine": false,
   "proseWrap": "preserve",
-  "selfClosingHtml": false,
   "embeddedLanguageFormatting": "auto",
   "singleAttributePerLine": false
 }

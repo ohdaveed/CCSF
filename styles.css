@@ -1,9 +1,9 @@
-/* style.css */
+style.css
 
 /* Reset default styles */
-/* input {
-	text-align: right;
-} */
+input {
+  text-align: right;
+}
 
 table,
 th,
@@ -24,12 +24,21 @@ tr:nth-child(2n) {
   background-color: gray;
 }
 
-/* form {
-	margin-left: auto;
-	margin-right: auto;
-	width: 300px;
+card {
+  width: 90vw; /* Occupy 90% of viewport width by default */
+}
 
-} */
+@media (min-width: 768px) {
+  .card {
+    width: 50vw; /* Occupy 50% of viewport width on larger screens */
+  }
+}
+form {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+
 code {
   background-color: #f9f2f4;
   padding: 0 5px;
@@ -37,15 +46,16 @@ code {
 }
 
 pre {
-  background-color: #f9f2f4;
-  padding: 10px;
-  border-radius: 5px;
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
 }
 
 section#draggable {
   width: 300px;
   border: 1px solid black;
-  /* text-align: center; */
+  text-align: center;
   padding-top: 30px;
   cursor: move;
 }
